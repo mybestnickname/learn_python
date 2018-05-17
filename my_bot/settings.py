@@ -1,5 +1,4 @@
 TELEGRAM_API_KEY = "561255866:AAG_NKHXCkLDMvBQ0vJHOBi2-OP_LLZ53Vg"
-#TELEGRAM_API_KEY = "584444640:AAHZr60EYxxIWobrFPEYWRUV8RsfHonjtJQ"
 import ephem
 all_constells = """
 Andromeda (And) Андромеда
@@ -91,6 +90,6 @@ Virgo (Vir) Дева
 Volans (Vol) Летучая Рыба
 Vulpecula (Vul) Лисичка
 """
-# знаю, что два одинаковых стрипа в одном генераторе плохой тон, но вложенный писать лень)
+#знаю, что два одинаковых стрипа в одном генераторе плохой тон, но вложенный писать лень)
 constells_dict = {row.split(' ')[1][1:-1]: row.split(' ')[2]
-                  for row in all_constells.strip().split('\n')}
+                    for row in all_constells.strip().split('\n')}
