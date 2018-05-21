@@ -1,4 +1,7 @@
-.env
+.my_bot/env/
+my_bot/env/
+*env
+env
 .env.example
 .env.local
 .env.staging
