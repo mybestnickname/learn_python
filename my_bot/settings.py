@@ -1,4 +1,4 @@
-TELEGRAM_API_KEY = "561255866:AAG_NKHXCkLDMvBQ0vJHOBi2-OP_LLZ53Vg"
+TELEGRAM_API_KEY = "TOKEN"
 import ephem
 all_constells = """
 Andromeda (And) Андромеда

@@ -1,17 +1,10 @@
 def main():
 
-    updater = Updater(config.token)
+    updater = Updater(TELEGRAM_API_KEY)
 
     # Get the dispatcher to register handlers
     dp = updater.dispatcher
-
-    dp.add_handler(MessageHandler(Filters.text, handleMessage))
-  
-    # log all errors
-    dp.add_error_handler(error)
-
     updater.start_polling(network_delay=3)
-
     updater.idle()
 
 
