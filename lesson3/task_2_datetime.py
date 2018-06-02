@@ -6,7 +6,7 @@ now_date = now_datetime.date()
 # вчера
 print(now_date - timedelta(days=1))
 # сегодня
-print(now_date)
+print(now_date) 
 # месяц назад
 now_date_d = now_date.day
 pre_month_last_day_date = (now_date.replace(day=1) - timedelta(days=1))

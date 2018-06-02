@@ -1,4 +1,4 @@
-TELEGRAM_API_KEY = "TOKEN"
+TELEGRAM_API_KEY = "561255866:AAEj31z09FQR5SwEiDbEvyIfVcP5jUWh3sc"
 import ephem
 all_constells = """
 Andromeda (And) Андромеда
@@ -90,6 +90,11 @@ Virgo (Vir) Дева
 Volans (Vol) Летучая Рыба
 Vulpecula (Vul) Лисичка
 """
-#знаю, что два одинаковых стрипа в одном генераторе плохой тон, но вложенный писать лень)
+# знаю, что два одинаковых стрипа в одном генераторе плохой тон, но вложенный писать лень)
 constells_dict = {row.split(' ')[1][1:-1]: row.split(' ')[2]
-                    for row in all_constells.strip().split('\n')}
+                  for row in all_constells.strip().split('\n')}
+
+# PROXY = {'proxy_url': 'socks5://prem1.tgresistance.com:3306',
+# 'urllib3_proxy_kwargs': {'username': 'user_70645578', 'password': 'ov7ecZLCviq47127'}}
+PROXY = {'proxy_url': 'socks5://t1.learn.python.ru:1080',
+         'urllib3_proxy_kwargs': {'username': 'learn', 'password': 'python'}}

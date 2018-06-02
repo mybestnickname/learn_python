@@ -1,4 +1,4 @@
-user_info = {'first_name': '',
+buser_info = {'first_name': '',
              'second_name': ''}
 first_name = input('input first_name')
 second_name = input('input second_name')

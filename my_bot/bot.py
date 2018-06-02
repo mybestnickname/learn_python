@@ -2,17 +2,15 @@
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 from telegram import InlineKeyboardMarkup, InlineKeyboardButton
 import logging
-from settings import constells_dict, TELEGRAM_API_KEY
+from settings import constells_dict, TELEGRAM_API_KEY, PROXY
 import ephem
 import datetime
+from datetime import time
 
 logging.basicConfig(format='%(asctime)s - %(levelname)s - %(message)s',
                     level=logging.INFO,
                     filename='bot.log'
                     )
-
-PROXY = {'proxy_url': 'socks5://t1.learn.python.ru:1080',
-         'urllib3_proxy_kwargs': {'username': 'learn', 'password': 'python'}}
 
 
 def start_handler(bot, update):
@@ -180,7 +178,12 @@ def constellations_translator(const_name):
 
 def main():
     updt = Updater(TELEGRAM_API_KEY, request_kwargs=PROXY)
-    # лучше отлавливать команды декораторами, наверное.
+    try:
+        updt.start_polling()
+    except Exception:
+        print(';(')
+        time.sleep(15)
+# лучше отлавливать команды декораторами, наверное.
     updt.dispatcher.add_handler(CommandHandler("start", start_handler))
     updt.dispatcher.add_handler(CommandHandler("planet", planet_handler))
     updt.dispatcher.add_handler(CommandHandler("moon", moon_handler))
