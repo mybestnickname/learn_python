@@ -1,38 +1,37 @@
 <!doctype html>
-<head>
-<style>
-table, th, td {
-    border: 1px solid black;
-}
-</style>
-</head>
-<title>Новорожденные {{ year }} год.</title>
+	<head>
+		<title>Новорожденные {{ year }} год.</title>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="/static/css/main.css" />
+	</head>
+	<body>
+		<form>
+ 			<select name="year">
+   			<option value="2015">2015</option>
+   			<option value="2016">2016</option>
+   			<option value="2017">2017</option>
+   			<option value="2018">2018</option>
+ 			</select>
+  		<input type="submit" value="Submit">
+		</form>
 
-<form>
-  <select name="year">
-    <option value="2015">2015</option>
-    <option value="2016">2016</option>
-    <option value="2017">2017</option>
-    <option value="2018">2018</option>
-  </select>
-  <input type="submit" value="Submit">
-</form>
+		<h2>Данные о именах новорожденных за {{ year }} год.</h2>
 
-<h2>Данные о именах новорожденных за {{ year }} год.</h2>
-
-<table style="width:100%">
-    <tr>
-        <th>Имя</th>
-        <th>Месяц</th>
-        <th>Кол-во</th>
-    </tr>
-    {% if names_lst %}
-    {% for dict_item in names_lst %}
-    <tr>
-        <td>{{dict_item['Name']}}</td>
-        <td>{{dict_item['Month']}}</td>
-        <td>{{dict_item['NumberOfPersons']}}</td>
-    </tr>
-    {% endfor %}
-    {% endif %}
-</table>
+		<table style="width:100%">
+   			<tr>
+    			<th class='first'>Имя</th>
+    			<th class='second'>Месяц</th>
+    			<th class='third'>Кол-во</th>
+    		</tr>
+    		{% if names_lst %}
+    			{% for dict_item in names_lst %}
+    			<tr>
+    				<td>{{dict_item['Name']}}</td>
+    				<td>{{dict_item['Month']}}</td>
+    				<td>{{dict_item['NumberOfPersons']}}</td>
+    			</tr>
+   				{% endfor %}
+    		{% endif %}
+		</table>
+	</body>
+</html>

@@ -58,5 +58,3 @@ if __name__ == '__main__':
     file_name = 'metro.xlsx'
     metro_dict = dict_creater(file_name)
     escalator_checker(metro_dict)
-else:
-    pass

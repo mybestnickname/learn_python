@@ -15,6 +15,8 @@ def show_names(year=2018):
     url = 'http://api.data.mos.ru/v1/datasets/2009/rows?api_key={}'.format(
         my_api)
     year_names_ls = get_names(url, year)
+    print(year_names_ls)
+    return 'Hello test!'
     if not year_names_ls:
         # abort(404)
         return '<h2>Данные за {} год не найдены. :(</h2>'.format(year)
