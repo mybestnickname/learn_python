@@ -39,6 +39,7 @@ def get_names(url, year):
         'NumberOfPersons': 6
     }
     """
+    #print(url)
     result = requests.get(url)
     if not result.status_code == 200:
         return False

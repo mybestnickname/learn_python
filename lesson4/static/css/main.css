@@ -10,3 +10,6 @@ table, th, td {
 .third{
 	color: green;
 }
+h2#title {
+	color: red;
+}
